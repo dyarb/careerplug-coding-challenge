@@ -1,0 +1,12 @@
+h1 Edit Post
+
+section
+  = form_for @post do |f|
+    .form-group
+      = f.label :title
+      = f.text_field :title, placeholder: 'Great New Post'
+    .form-group
+      = f.label :body
+      = f.text_area :body
+    .form-actions
+      = f.submit 'Edit Post', data: { disable: true }
