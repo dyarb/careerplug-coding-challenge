@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  post: one
+  name: John Doe
+  body: Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+
+two:
+  post: two
+  name: Jane Doe
+  body: Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
