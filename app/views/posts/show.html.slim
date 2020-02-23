@@ -1,4 +1,6 @@
-h2#post-title= @post.title
+h2#post-title.margin-bottom-none= @post.title
+.meta
+  p.margin-top-none= pluralize(@post.comments.size, 'comment')
 
 section#post-body.post.margin-top-none
   p= @post.body
