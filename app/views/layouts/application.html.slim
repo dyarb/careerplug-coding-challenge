@@ -9,5 +9,8 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
-    = render 'layouts/flashes'
-    = yield
+    = render 'layouts/navigation'
+
+    #content
+      = render 'layouts/flashes'
+      = yield

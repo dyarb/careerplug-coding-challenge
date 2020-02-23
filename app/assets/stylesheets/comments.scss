@@ -1,3 +1,39 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comment {
+  background: #fff;
+  margin-top: 40px;
+  padding: 40px;
+
+  h4 {
+    margin-bottom: 5px;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  .actions {
+    text-align: right;
+
+    a {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+#new-comment-box{
+  background: #fff;
+  margin-bottom: 40px;
+  padding: 40px;
+}

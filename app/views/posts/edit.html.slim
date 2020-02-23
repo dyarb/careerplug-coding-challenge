@@ -1,12 +1,12 @@
-h1 Edit Post
+h2 Edit Post
 
-section
+section.post.margin-top-none
   = form_for @post do |f|
     .form-group
       = f.label :title
       = f.text_field :title, placeholder: 'Great New Post'
     .form-group
       = f.label :body
-      = f.text_area :body
+      = f.text_area :body, rows: 5, placeholder: 'Write your post here...'
     .form-actions
-      = f.submit 'Edit Post', data: { disable: true }
+      = f.submit 'Edit Post', data: { disable: true }, class: 'button primary'

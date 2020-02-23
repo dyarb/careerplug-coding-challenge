@@ -1,9 +1,10 @@
-h1#post-title= @post.title
+h2#post-title= @post.title
 
-section#post-body
-  = @post.body
+section#post-body.post.margin-top-none
+  p= @post.body
 
 section#comments
+  h3 Comments
   #new-comment-box
     = form_for @post.comments.new, url: post_comments_path(@post), remote: true do |f|
       .form-group
@@ -11,9 +12,9 @@ section#comments
         = f.text_field :name, placeholder: 'John Doe'
       .form-group
         = f.label :body
-        = f.text_area :body
+        = f.text_area :body, rows: 4, placeholder: 'Write your comment here...'
       .actions
-        = f.submit 'Save Comment', data: { disable: true }
+        = f.submit 'Save Comment', data: { disable: true }, class: 'button primary'
   #comments-list
     - @post.comments.where('comments.id is not null').each do |comment|
       = render partial: 'comments/comment', object: comment

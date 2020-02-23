@@ -1,0 +1,38 @@
+//
+// Button Styles
+//
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #707070;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 3px;
+
+  &:hover {
+    background: lighten(#707070, 10%);
+  }
+
+  &.primary {
+    background: #6b1d6e;
+
+    &:hover {
+      background: lighten(#6b1d6e, 10%);
+    }
+  }
+
+  &.secondary {
+    background: #0eaf87;
+
+    &:hover {
+      background: lighten(#0eaf87, 10%);
+    }
+  }
+
+  &.small {
+    padding: 5px 10px;
+  }
+}

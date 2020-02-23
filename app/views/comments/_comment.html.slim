@@ -1,6 +1,7 @@
 article.comment id="comment-#{comment.id}"
-  h6= comment.name
+  .flex.justify-between.items-start
+    h4= comment.name
+    .actions
+      = link_to 'Edit', edit_post_comment_path(@post, comment), class: 'button secondary small'
+      = link_to 'Delete', post_comment_path(@post, comment), method: :delete, remote: true, class: 'button small'
   p= comment.body
-  .actions
-    = link_to 'Edit', edit_post_comment_path(@post, comment)
-    = link_to 'Delete', post_comment_path(@post, comment), method: :delete, remote: true
