@@ -1,0 +1,5 @@
+- if flash.any?
+  section#flashs
+    - flash.each do |type, msg|
+      .flash class="flash-#{type}"
+        = msg
