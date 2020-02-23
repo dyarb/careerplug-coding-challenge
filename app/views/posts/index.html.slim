@@ -10,6 +10,6 @@ section#posts
           = link_to 'Edit', edit_post_path(post), class: 'button secondary small'
           = link_to 'Delete', post_path(post), method: :delete, remote: true, class: 'button small'
       p
-        = link_to post.body, post_path(post)
+        = link_to truncate(post.body, length: 350, omission: '... (continued)'), post_path(post)
       .meta
         = link_to pluralize(post.comments.size, 'comment'), post_path(post)
