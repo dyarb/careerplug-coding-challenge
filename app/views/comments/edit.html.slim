@@ -1,0 +1,12 @@
+h1 Edit Comment
+
+section
+  = form_for @comment, url: post_comment_path(@post, @comment) do |f|
+    .form-group
+      = f.label :name
+      = f.text_field :name, placeholder: 'John Doe'
+    .form-group
+      = f.label :body
+      = f.text_area :body
+    .form-actions
+      = f.submit 'Edit Comment', data: { disable: true }

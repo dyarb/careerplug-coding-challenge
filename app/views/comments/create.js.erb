@@ -1,0 +1,4 @@
+var commentsList = document.getElementById("comments-list")
+
+document.getElementById("new_comment").reset();
+commentsList.innerHTML = "<%= j render partial: 'comment', object: @comment %>" + commentsList.innerHTML;
