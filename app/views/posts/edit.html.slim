@@ -1,6 +1,11 @@
 h2 Edit Post
 
 section.post.margin-top-none
+  - if @post.errors.any?
+    #errors
+      ul
+        - @post.errors.full_messages.each do |msg|
+          li= msg
   = form_for @post do |f|
     .form-group
       = f.label :title

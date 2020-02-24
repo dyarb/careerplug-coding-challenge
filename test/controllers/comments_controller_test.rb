@@ -5,12 +5,10 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
     @post = posts(:one)
   end
 
-  test 'creates a new comment via js' do
+  test 'creates a new comment' do
     assert_difference '@post.comments.count', 1 do
-      post post_comments_url(@post), params: { comment: { name: 'Bob Thomas', body: 'I agree with everything in your post!'} }, xhr: true
+      post post_comments_url(@post), params: { comment: { name: 'Bob Thomas', body: 'I agree with everything in your post!'} }
     end
-
-    assert_equal 'text/javascript', @response.media_type
   end
 
   test 'renders the edit template' do

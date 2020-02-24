@@ -2,7 +2,14 @@ class CommentsController < ApplicationController
   before_action :find_post
 
   def create
-    @comment = @post.comments.create(comment_params)
+    @comment = @post.comments.new(comment_params)
+
+    if @comment.save
+      redirect_to post_path(@post), flash: { success: 'Comment created successfully' }
+    else
+      flash.now[:error] = 'There was an error saving your comment please try again'
+      render 'posts/show'
+    end
   end
 
   def edit

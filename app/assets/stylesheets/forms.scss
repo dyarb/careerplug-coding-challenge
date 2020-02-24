@@ -53,11 +53,25 @@ textarea {
   }
 }
 
+[type='submit'] {
+  cursor: pointer;
+}
+
 textarea {
   width: 100%;
   height: auto;
 
   &[rows] {
     height: auto;
+  }
+}
+
+#errors {
+  background: lighten(#af0e44, 60%);
+  margin-bottom: 30px;
+  padding: 10px;
+
+  li {
+    line-height: 25px;
   }
 }
