@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#search {
+  margin-bottom: 30px;
+
+  input[type="text"] {
+    margin-right: 10px;
+  }
+}
+
 .post {
   background: #fff;
   margin-top: 40px;

@@ -1,5 +1,11 @@
 h2 Posts
 
+section#search
+  = form_tag posts_path, method: :get do
+    .form-group.flex.items-center
+      = text_field_tag :term, params[:term], placeholder: 'Search for a post'
+      = submit_tag 'Search', class: 'button primary'
+
 section#posts
   - @posts.each do |post|
     article.post id="post-#{post.id}"

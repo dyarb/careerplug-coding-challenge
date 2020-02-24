@@ -19,4 +19,20 @@ class PostTest < ActiveSupport::TestCase
     refute post.valid?
     assert_not_nil post.errors[:body]
   end
+
+  test 'search posts by title' do
+    post_one = posts(:one)
+    post_two = posts(:two)
+    post_three = Post.create(title: 'Find me by my title', body: 'This is a post body.')
+
+    assert_equal Post.by_term('Find me').first, post_three
+  end
+
+  test 'search posts by body' do
+    post_one = posts(:one)
+    post_two = posts(:two)
+    post_three = Post.create(title: 'Post Title', body: 'Find me by the content of my post.')
+
+    assert_equal Post.by_term('Find me').first, post_three
+  end
 end
