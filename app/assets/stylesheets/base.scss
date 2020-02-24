@@ -47,3 +47,15 @@ p {
 .margin-bottom-none {
   margin-bottom: 0 !important;
 }
+
+.actions {
+  text-align: right;
+
+  a {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
