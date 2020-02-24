@@ -26,7 +26,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
       post posts_url, params: { post: { title: 'Create A Rails Blog', body: 'How to create your very own blog using Ruby on Rails!' } }
     end
 
-    assert_redirected_to post_path(Post.last)
+    assert_redirected_to post_path(Post.first)
   end
 
   test 'renders the edit template' do

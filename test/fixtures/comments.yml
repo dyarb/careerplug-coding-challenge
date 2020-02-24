@@ -6,6 +6,6 @@ one:
   body: Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
 
 two:
-  post: two
+  post: one
   name: Jane Doe
   body: Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
